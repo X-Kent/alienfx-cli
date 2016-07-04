@@ -111,13 +111,13 @@ int main(int argc, char** argv) {
 	if (reg == -1) {
 		printf("Invalid region provided: %s \n",argv[1]);
 		printUsage(argv[0]);
-		return;
+		return -1;
 	}
 	int color = getHex(argv[2],colors);	
 	if (color == -1) {
 		printf("Invalid color provided: %s \n",argv[2]);
 		printUsage(argv[0]);
-		return;
+		return -1;
 	}
 	
 	usbTestCode(reg,color);
